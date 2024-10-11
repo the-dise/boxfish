@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_switch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnSecondary"
+    android:gravity="center"
+    android:theme="@style/Boxfish.AppWidgetContainer">
+
+
+    <ImageView
+        android:id="@+id/image_switch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"
+        android:importantForAccessibility="no"
+        android:padding="8dp"
+        android:src="@drawable/ic_widget_boxfish_24" />
+
+
+    <TextView
+        android:id="@+id/text_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_switch"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/widget_service_start"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold" />
+
+</RelativeLayout>

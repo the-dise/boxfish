@@ -1,0 +1,34 @@
+[
+  {
+    "remarks": "Block UDP",
+    "outboundTag": "block",
+    "port": "443",
+    "network": "udp"
+  },
+  {
+    "remarks": "Block advertisements",
+    "outboundTag": "block",
+    "domain": [
+      "geosite:category-ads-all"
+    ]
+  },
+  {
+    "remarks": "Bypass LAN (IPs)",
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:private"
+    ]
+  },
+  {
+    "remarks": "Bypass LAN (Domains)",
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:private"
+    ]
+  },
+  {
+    "remarks": "Final Agent",
+    "port": "0-65535",
+    "outboundTag": "proxy"
+  }
+]

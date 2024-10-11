@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:icon="@drawable/ic_manage_search_24"
+        android:key="pref_sniffing_enabled"
+        android:summary="@string/summary_pref_sniffing_enabled"
+        android:title="@string/title_pref_sniffing_enabled"
+        app:widgetLayout="@layout/preference_material_switch" />
+
+    <SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:icon="@drawable/ic_alt_route_24"
+
+        android:key="pref_route_only_enabled"
+        android:summary="@string/summary_pref_route_only_enabled"
+        android:title="@string/title_pref_route_only_enabled"
+        app:widgetLayout="@layout/preference_material_switch" />
+
+    <SwitchPreferenceCompat
+        android:icon="@drawable/ic_auto_mode_24"
+        android:key="pref_is_booted"
+        android:summary="@string/summary_pref_is_booted"
+        android:title="@string/title_pref_is_booted"
+        app:widgetLayout="@layout/preference_material_switch" />
+
+    <PreferenceCategory android:title="@string/title_vpn_settings">
+        <SwitchPreferenceCompat
+
+            android:icon="@drawable/ic_app_registration_24"
+            android:key="pref_per_app_proxy"
+            android:summary="@string/summary_pref_per_app_proxy"
+            android:title="@string/title_pref_per_app_proxy"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <SwitchPreferenceCompat
+
+            android:icon="@drawable/ic_lan_connect_24"
+            android:key="pref_local_dns_enabled"
+            android:summary="@string/summary_pref_local_dns_enabled"
+            android:title="@string/title_pref_local_dns_enabled"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <SwitchPreferenceCompat
+
+            android:icon="@drawable/ic_lan_pending_24"
+            android:key="pref_fake_dns_enabled"
+            android:summary="@string/summary_pref_fake_dns_enabled"
+            android:title="@string/title_pref_fake_dns_enabled"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <EditTextPreference
+
+            android:icon="@drawable/ic_directions_boat_24"
+            android:inputType="number"
+            android:key="pref_local_dns_port"
+            android:summary="10853"
+            android:title="@string/title_pref_local_dns_port" />
+
+        <EditTextPreference
+            android:icon="@drawable/ic_dns_24"
+            android:key="pref_vpn_dns"
+            android:summary="@string/summary_pref_remote_dns"
+            android:title="@string/title_pref_vpn_dns" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title_ui_settings">
+        <SwitchPreferenceCompat
+
+            android:icon="@drawable/ic_speed_24"
+            android:key="pref_speed_enabled"
+            android:summary="@string/summary_pref_speed_enabled"
+            android:title="@string/title_pref_speed_enabled"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <SwitchPreferenceCompat
+
+            android:icon="@drawable/ic_delete_24"
+            android:key="pref_confirm_remove"
+            android:summary="@string/summary_pref_confirm_remove"
+            android:title="@string/title_pref_confirm_remove"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <SwitchPreferenceCompat
+
+            android:icon="@drawable/ic_qr_code_scanner_24"
+            android:key="pref_start_scan_immediate"
+            android:summary="@string/summary_pref_start_scan_immediate"
+            android:title="@string/title_pref_start_scan_immediate"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <ListPreference
+            android:defaultValue="auto"
+            android:entries="@array/language_select"
+            android:entryValues="@array/language_select_value"
+
+            android:icon="@drawable/ic_language_24"
+            android:key="pref_language"
+            android:summary="%s"
+            android:title="@string/title_language" />
+
+        <ListPreference
+            android:defaultValue="0"
+
+            android:entries="@array/ui_mode_night"
+            android:entryValues="@array/ui_mode_night_value"
+            android:icon="@drawable/ic_palette_24"
+            android:key="pref_ui_mode_night"
+            android:summary="%s"
+            android:title="@string/title_pref_ui_mode_night" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/title_mux_settings"
+        app:initialExpandedChildrenCount="1">
+        <SwitchPreferenceCompat
+            android:icon="@drawable/ic_merge_type_24"
+            android:key="pref_mux_enabled"
+            android:summary="@string/summary_pref_mux_enabled"
+            android:title="@string/title_pref_mux_enabled"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <EditTextPreference
+            android:icon="@drawable/ic_transit_connection_horizontal_24"
+            android:inputType="number"
+            android:key="pref_mux_concurrency"
+            android:summary="8"
+            android:title="@string/title_pref_mux_concurrency" />
+
+        <EditTextPreference
+            android:icon="@drawable/ic_transit_detour_24"
+            android:inputType="number"
+            android:key="pref_mux_xudp_concurrency"
+            android:summary="8"
+            android:title="@string/title_pref_mux_xudp_concurrency" />
+
+        <ListPreference
+            android:defaultValue="reject"
+            android:entries="@array/mux_xudp_quic_entries"
+            android:entryValues="@array/mux_xudp_quic_value"
+            android:icon="@drawable/ic_blank_24"
+            android:key="pref_mux_xudp_quic"
+            android:summary="%s"
+            android:title="@string/title_pref_mux_xudp_quic" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/title_fragment_settings"
+        app:initialExpandedChildrenCount="1">
+        <SwitchPreferenceCompat
+
+            android:icon="@drawable/ic_puzzle_outline_24"
+            android:key="pref_fragment_enabled"
+            android:title="@string/title_pref_fragment_enabled"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <EditTextPreference
+
+            android:icon="@drawable/ic_straighten_24"
+            android:key="pref_fragment_length"
+            android:summary="50-100"
+            android:title="@string/title_pref_fragment_length" />
+
+        <EditTextPreference
+
+            android:icon="@drawable/ic_timer_24"
+            android:key="pref_fragment_interval"
+            android:summary="10-20"
+            android:title="@string/title_pref_fragment_interval" />
+
+        <ListPreference
+            android:defaultValue="tlshello"
+            android:entries="@array/fragment_packets"
+            android:entryValues="@array/fragment_packets"
+            android:icon="@drawable/ic_package_24"
+            android:key="pref_fragment_packets"
+            android:summary="%s"
+            android:title="@string/title_pref_fragment_packets" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/title_sub_setting"
+        app:initialExpandedChildrenCount="1">
+        <SwitchPreferenceCompat
+            android:icon="@drawable/ic_cloud_sync_24"
+            android:key="pref_auto_update_subscription"
+            android:summary="@string/summary_pref_auto_update_subscription"
+            android:title="@string/title_pref_auto_update_subscription"
+            app:widgetLayout="@layout/preference_material_switch" />
+        <EditTextPreference
+            android:icon="@drawable/ic_update_24"
+            android:inputType="number"
+            android:key="pref_auto_update_interval"
+            android:summary="1440"
+            android:title="@string/title_pref_auto_update_interval" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/title_advanced"
+        app:initialExpandedChildrenCount="1">
+
+        <SwitchPreferenceCompat
+
+            android:icon="@drawable/ic_numeric_6_box_24"
+            android:key="pref_prefer_ipv6"
+            android:summary="@string/summary_pref_prefer_ipv6"
+            android:title="@string/title_pref_prefer_ipv6"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_lan_24"
+            android:key="pref_proxy_sharing_enabled"
+            android:summary="@string/summary_pref_proxy_sharing_enabled"
+            android:title="@string/title_pref_proxy_sharing_enabled"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_lock_24"
+            android:key="pref_allow_insecure"
+            android:summary="@string/summary_pref_allow_insecure"
+            android:title="@string/title_pref_allow_insecure"
+            app:widgetLayout="@layout/preference_material_switch" />
+
+        <EditTextPreference
+
+            android:icon="@drawable/ic_protocol_socks_24"
+            android:inputType="number"
+            android:key="pref_socks_port"
+            android:summary="10808"
+            android:title="@string/title_pref_socks_port" />
+
+        <EditTextPreference
+
+            android:icon="@drawable/ic_protocol_http_24"
+            android:inputType="number"
+            android:key="pref_http_port"
+            android:summary="10809"
+            android:title="@string/title_pref_http_port" />
+
+        <EditTextPreference
+
+            android:icon="@drawable/ic_dns_24"
+            android:key="pref_remote_dns"
+            android:summary="@string/summary_pref_remote_dns"
+            android:title="@string/title_pref_remote_dns" />
+
+        <EditTextPreference
+
+            android:icon="@drawable/ic_dns_24"
+            android:key="pref_domestic_dns"
+            android:summary="@string/summary_pref_domestic_dns"
+            android:title="@string/title_pref_domestic_dns" />
+
+        <EditTextPreference
+
+            android:icon="@drawable/ic_link_24"
+            android:key="pref_delay_test_url"
+            android:summary="@string/summary_pref_delay_test_url"
+            android:title="@string/title_pref_delay_test_url" />
+
+        <ListPreference
+
+            android:defaultValue="warning"
+            android:entries="@array/core_log_level"
+            android:entryValues="@array/core_log_level"
+            android:icon="@drawable/ic_log_24"
+            android:key="pref_core_log_level"
+            android:summary="%s"
+            android:title="@string/title_core_log_level" />
+
+        <ListPreference
+            android:defaultValue="VPN"
+            android:entries="@array/mode_entries"
+            android:entryValues="@array/mode_value"
+            android:icon="@drawable/ic_vpn_lock_24"
+            android:key="pref_mode"
+            android:summary="%s"
+            android:title="@string/title_mode" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

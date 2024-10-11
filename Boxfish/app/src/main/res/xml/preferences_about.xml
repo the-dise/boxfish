@@ -1,0 +1,42 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="title_backup">
+        <Preference
+            android:key="backup"
+            android:title="@string/title_configuration_backup"
+            android:summary="@string/summary_configuration_backup"
+            android:icon="@drawable/ic_backup_24" />
+        <Preference
+            android:key="share"
+            android:title="@string/title_configuration_share"
+            android:icon="@drawable/ic_share_24" />
+        <Preference
+            android:key="restore"
+            android:title="@string/title_configuration_restore"
+            android:icon="@drawable/ic_cloud_download_24" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="title_other">
+        <Preference
+            android:key="source_code"
+            android:title="@string/title_source_code"
+            android:icon="@drawable/ic_code_24" />
+        <Preference
+            android:key="feedback"
+            android:title="@string/title_pref_feedback"
+            android:icon="@drawable/ic_feedback_24" />
+        <Preference
+            android:key="tg_channel"
+            android:title="@string/title_tg_channel"
+            android:icon="@drawable/ic_telegram_24" />
+        <Preference
+            android:key="privacy_policy"
+            android:title="@string/title_privacy_policy"
+            android:icon="@drawable/ic_shield_person_24" />
+    </PreferenceCategory>
+
+    <Preference
+        android:key="version"
+        android:title="@string/title_about"
+        android:summary="ver. ${BuildConfig.VERSION_NAME} (${SpeedtestUtil.getLibVersion()})"
+        android:icon="@drawable/ic_info_24" />
+</PreferenceScreen>

@@ -1,0 +1,5 @@
+*.dat
+*.jks
+Boxfish/app/release/
+.idea/
+.gradle/

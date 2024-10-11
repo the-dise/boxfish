@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_rule"
+        android:icon="@drawable/ic_add_24"
+        android:title="@string/routing_settings_add_rule"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:icon="@drawable/ic_more_vert_24"
+        android:title="@string/menu_item_more"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/user_asset_setting"
+                android:icon="@drawable/ic_note_add_24"
+                android:title="@string/title_user_asset_setting" />
+            <item
+                android:icon="@drawable/ic_file_import_outline_24"
+                android:id="@+id/import_rulesets"
+                android:title="@string/routing_settings_import_rulesets"
+                app:showAsAction="never" />
+            <item
+                android:icon="@drawable/ic_content_paste_import_24"
+                android:id="@+id/import_rulesets_from_clipboard"
+                android:title="@string/routing_settings_import_rulesets_from_clipboard"
+                app:showAsAction="never" />
+            <item
+                android:icon="@drawable/ic_content_paste_export_24"
+                android:id="@+id/export_rulesets_to_clipboard"
+                android:title="@string/routing_settings_export_rulesets_to_clipboard"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>
