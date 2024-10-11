@@ -1,12 +1,7 @@
 name: Build APK
 
 on:
-  push:
-  workflow_dispatch:
-    inputs:
-      XRAY_CORE_VERSION:
-        description: 'Xray core version or commit hash'
-        required: false
+  workflow_dispatch:  # Manual start only
 
 
 jobs:
