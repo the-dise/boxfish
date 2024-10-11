@@ -1,36 +1,58 @@
-# v2rayNG
+<div align="center">
+  <a href="https://star-history.com/#the-dise/Mir-Pay-Wallet&Date">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="src/ic_banner_dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="src/ic_banner_light.svg" />
+      <img alt="Star History Chart" src="src/ic_banner_light.svg" width="512" height="auto" alt="Boxfish logo" />
+    </picture>
+  </a>
+</div>
 
-A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-core) and [v2fly core](https://github.com/v2fly/v2ray-core)
+# Boxfish
 
-[![API](https://img.shields.io/badge/API-21%2B-yellow.svg?style=flat)](https://developer.android.com/about/versions/lollipop)
-[![Kotlin Version](https://img.shields.io/badge/Kotlin-1.9.23-blue.svg)](https://kotlinlang.org)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/2dust/v2rayNG)](https://github.com/2dust/v2rayNG/commits/master)
-[![CodeFactor](https://www.codefactor.io/repository/github/2dust/v2rayng/badge)](https://www.codefactor.io/repository/github/2dust/v2rayng)
-[![GitHub Releases](https://img.shields.io/github/downloads/2dust/v2rayNG/latest/total?logo=github)](https://github.com/2dust/v2rayNG/releases)
-[![Chat on Telegram](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://t.me/v2rayn)
+**This project is forked [2dust/v2rayNG](https://github.com/2dust/v2rayNG)**
 
-<a href="https://play.google.com/store/apps/details?id=com.v2ray.ang">
-<img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="165" height="64" />
-</a>
+Boxfish is a v2Ray client for Android, supporting both [Xray Core](https://github.com/XTLS/Xray-core) and [v2Fly Core](https://github.com/v2fly/v2ray-core).
 
-### Telegram Channel
-[github_2dust](https://t.me/github_2dust)
+[![API](https://img.shields.io/badge/API-29%2B-yellow.svg?style=flat)](https://developer.android.com/about/versions/lollipop)
+[![Kotlin Version](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/the-dise/boxfish)](https://github.com/the-dise/boxfish/commits/master)
+[![CodeFactor](https://www.codefactor.io/repository/github/the-dise/boxfish/badge)](https://www.codefactor.io/repository/github/the-dise/boxfish)
+[![GitHub Releases](https://img.shields.io/github/downloads/the-dise/boxfish/latest/total?logo=github)](https://github.com/the-dise/boxfish/releases)
+[![Chat on Telegram](https://img.shields.io/badge/Telegram-Channel-brightgreen.svg)](https://t.me/thedise)
 
-### Usage
+## Overview
 
-#### Geoip and Geosite
-- geoip.dat and geosite.dat files are in `Android/data/com.v2ray.ang/files/assets` (path may differ on some Android device)
-- download feature will get enhanced version in this [repo](https://github.com/Loyalsoldier/v2ray-rules-dat) (Note it need a working proxy)
-- latest official [domain list](https://github.com/v2fly/domain-list-community) and [ip list](https://github.com/v2fly/geoip) can be imported manually
-- possible to use third party dat file in the same folder, like [h2y](https://guide.v2fly.org/routing/sitedata.html#%E5%A4%96%E7%BD%AE%E7%9A%84%E5%9F%9F%E5%90%8D%E6%96%87%E4%BB%B6)
+Boxfish provides a secure VPN client based on v2Ray and Xray cores for Android devices. It supports modern Android APIs and is developed using Kotlin. The primary purpose of the application is to bypass internet restrictions and create secure data tunnels.
 
-### More in our [wiki](https://github.com/2dust/v2rayNG/wiki)
+## Usage
 
-### Development guide
+### GeoIP and GeoSite
 
-Android project under V2rayNG folder can be compiled directly in Android Studio, or using Gradle wrapper. But the v2ray core inside the aar is (probably) outdated.  
-The aar can be compiled from the Golang project [AndroidLibV2rayLite](https://github.com/2dust/AndroidLibV2rayLite) or [AndroidLibXrayLite](https://github.com/2dust/AndroidLibXrayLite).
-For a quick start, read guide for [Go Mobile](https://github.com/golang/go/wiki/Mobile) and [Makefiles for Go Developers](https://tutorialedge.net/golang/makefiles-for-go-developers/)
+- The `geoip.dat` and `geosite.dat` files are located in: `Android/data/me.thedise.boxfish/files/assets` (the path may vary on some Android devices).
+- The download feature fetches enhanced versions from this [repository](https://github.com/Loyalsoldier/v2ray-rules-dat) (a working proxy is required).
+- The latest official [domain list](https://github.com/v2fly/domain-list-community) and [IP list](https://github.com/v2fly/geoip) can be imported manually.
+- Third-party data files like those from [h2y](https://guide.v2fly.org/en_US/routing/sitedata.html) can also be used by placing them in the same directory.
 
-v2rayNG can run on Android Emulators. For WSA, VPN permission need to be granted via
-`appops set [package name] ACTIVATE_VPN allow`
+## Wiki
+
+For detailed guides and additional information, please refer to the [Wiki](https://github.com/the-dise/boxfish/wiki).
+
+## Development Guide
+
+The Android project in the Boxfish folder can be compiled directly in Android Studio or using the Gradle wrapper. However, note that the v2Ray core inside the AAR file may be outdated.
+
+- You can compile the `*.aar` file from Go projects such as [AndroidLibV2rayLite](https://github.com/2dust/AndroidLibV2rayLite) or [AndroidLibXrayLite](https://github.com/2dust/AndroidLibXrayLite).
+- For a quick start, check out the guides for [Go Mobile](https://github.com/golang/go/wiki/Mobile) and [Makefiles for Go Developers](https://tutorialedge.net/golang/makefiles-for-go-developers/).
+
+### Running on Emulators
+
+Boxfish can be run on Android emulators. For WSA (Windows Subsystem for Android), VPN permissions need to be granted using the following command:
+
+````bash
+appops set [package name] ACTIVATE_VPN allow```
+````
+
+---
+
+<p align="center"><b>Made with ❤️ by Dise</b></p>
