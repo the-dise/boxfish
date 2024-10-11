@@ -11,8 +11,8 @@ android {
         applicationId = "me.thedise.boxfish"
         minSdk = 29
         targetSdk = 34
-        versionCode = 599
-        versionName = "1.9.6"
+        versionCode = 600
+        versionName = "1.0.0"
         multiDexEnabled = true
         splits {
             abi {
